@@ -79,6 +79,10 @@ a {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
+.header-mobile-wrapper {
+  display: none;
+}
+
 .header-wrapper {
   display: flex;
   justify-content: space-between;
@@ -283,6 +287,10 @@ a {
   letter-spacing: 0.02em;
   color: #434455;
   margin-bottom: 8px;
+}
+
+.member-img {
+  width: 100%;
 }
 
 .member-link {
@@ -725,6 +733,9 @@ a {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  .container {
+    max-width: 288px;
+  }
   .header-menu,
   .address {
     display: none;
@@ -758,6 +769,7 @@ a {
   }
 
   .header-mobile-wrapper {
+    display: block;
     transform: translateX(100%);
     opacity: 0;
     position: absolute;
@@ -865,8 +877,8 @@ a {
 
   .header-icons {
     display: flex;
-    justify-content: space-between;
-    gap: 16px;
+
+    gap: 40px;
   }
 
   .header-icon {
@@ -932,7 +944,7 @@ a {
   }
 
   .member {
-    max-width: 264px;
+    width: 100%;
   }
 
   .portfolio {
@@ -945,12 +957,11 @@ a {
   }
 
   .portfolio-item {
-    width: 288px;
+    width: 100%;
   }
 
   .portfolio-img {
     width: 100%;
-    height: 280px;
   }
 
   .footer-container {
@@ -983,5 +994,85 @@ a {
   .footer-btn {
     width: 165px;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1157px) {
+  .container {
+    max-width: 736px;
+  }
+  .address-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .address-link {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 112px 0;
+  }
+
+  .about {
+    padding: 96px 0;
+  }
+
+  .about-wrapper {
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .about-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .about-icon {
+    display: none;
+  }
+  .about-subtitle {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  .about-text {
+    font-weight: 500;
+  }
+
+  .team {
+    padding: 96px;
+  }
+
+  .team-wrapper {
+    flex-wrap: wrap;
+    gap: 64px 24px;
+  }
+
+  .member {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .portfolio {
+    padding: 96px 0;
+  }
+
+  .portfolio-wrapper {
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+  .portfolio-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 72px 24px;
+  }
+
+  .footer-wrapper {
+    margin-right: 0;
+  }
+
+  .footer-social {
+    margin-right: 0;
   }
 }
